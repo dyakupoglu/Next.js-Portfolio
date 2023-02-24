@@ -13,7 +13,10 @@ type Props = {};
 
 export default function ExperienceCard({}: Props) {
   return (
-    <article className="flex flex-col rounded-l items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[860px] snap-center bg-[#292929] p-0 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden">
+    <article
+      className="flex flex-col rounded-l items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[860px] 
+    snap-center bg-[#292929] p-0 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden"
+    >
       <motion.div
         initial={{
           y: -100,
@@ -34,6 +37,7 @@ export default function ExperienceCard({}: Props) {
         <Image
           src={profilePic}
           alt="Company"
+          priority={true}
           className="w-32 h-32 rounded-full xl:h-[200px] xl:w-[200px] object-cover object-center"
         />
       </motion.div>
@@ -45,26 +49,31 @@ export default function ExperienceCard({}: Props) {
           <Image
             src={jsIcon}
             alt="Technology"
+            priority={true}
             className="h-10 w-10 rounded-full"
           />
           <Image
             src={typescriptIcon}
             alt="Technology"
+            priority={true}
             className="h-10 w-10 rounded-full"
           />
           <Image
             src={reactIcon}
             alt="Technology"
+            priority={true}
             className="h-10 w-10 rounded-full"
           />
           <Image
             src={nodejsIcon}
             alt="Technology"
+            priority={true}
             className="h-10 w-10 rounded-full"
           />
           <Image
             src={firebaseIcon}
             alt="Technology"
+            priority={true}
             className="h-10 w-10 rounded-full"
           />
         </div>

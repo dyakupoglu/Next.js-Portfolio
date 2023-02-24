@@ -46,13 +46,16 @@ export default function Projects({}: Props) {
       transition={{
         duration: 1.5,
       }}
-      className="relative h-screen flex justify-evenly items-center flex-col overflow-hidden md:flex-row max-w-full mx-auto text-left z-0 pt-[50px]"
+      className="relative h-screen flex justify-evenly items-center flex-col overflow-hidden max-w-full mx-auto text-left z-0 pt-[50px]"
     >
       <h3 className="top-24 uppercase tracking-[20px] text-gray-500 text-2xl absolute">
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
+      <div
+        className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 
+      scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#80d70d]"
+      >
         {projects.map((project, i) => (
           <div
             key={i}
@@ -77,6 +80,7 @@ export default function Projects({}: Props) {
               <Image
                 src={profilePic}
                 alt="projects"
+                priority={true}
                 className="w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[500px]"
               />
             </motion.div>

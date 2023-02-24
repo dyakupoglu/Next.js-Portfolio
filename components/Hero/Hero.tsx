@@ -40,6 +40,7 @@ export default function Hero({}: Props) {
         <Image
           src={profilePic}
           alt="Picture of the author"
+          priority={true}
           className="relative rounded-full h-[250px] w-[250px] mx-auto object-cover"
         />
       </motion.div>

@@ -28,6 +28,7 @@ export default function Skill({ directionLeft }: Props) {
         <Image
           src={profilePic}
           alt="skills"
+          priority={true}
           className="rounded-full border object-cover w-16 h-16 md:w-36 md:h-36 xl:w-32 xl:h-32 filter group-hover:scale-125 transition duration-300 ease-in-out hover:border-[#80d70d]"
         />
       </motion.div>

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
+// import { Link as LinkScroll } from "react-scroll/modules";
 
 type Props = {};
 
@@ -21,7 +22,7 @@ export default function Header({}: Props) {
           scale: 1,
         }}
         transition={{
-            duration: 1.5,
+          duration: 1.5,
         }}
         id="header-left"
         className="flex flex-row items-center"
@@ -30,63 +31,70 @@ export default function Header({}: Props) {
           url="https://www.youtube.com"
           fgColor="white"
           bgColor="transparent"
+          target="_blank"
         />
         <SocialIcon
           url="https://www.twitter.com"
           fgColor="white"
           bgColor="transparent"
+          target="_blank"
         />
         <SocialIcon
           url="https://www.instagram.com"
           fgColor="white"
           bgColor="transparent"
+          target="_blank"
         />
       </motion.div>
 
       {/* Header Middle */}
       <div>
-          <Link href="#about">
-            <button className="heroButton">About</button>
-          </Link>
-          <Link href="#experience">
-            <button className="heroButton">Experience</button>
-          </Link>
-          <Link href="#skills">
-            <button className="heroButton">Skills</button>
-          </Link>
-          <Link href="#projects">
-            <button className="heroButton">Projects</button>
-          </Link>
-        </div>
+        <Link href="#about">
+          <button className="heroButton">About</button>
+        </Link>
+        <Link href="#experience">
+          <button className="heroButton">Experience</button>
+        </Link>
+        <Link href="#skills">
+          <button className="heroButton">Skills</button>
+        </Link>
+        <Link href="#projects">
+          <button className="heroButton">Projects</button>
+        </Link>
+      </div>
 
       {/* Header Right */}
-      <motion.div
-       initial={{
-        x: 500,
-        opacity: 0,
-        scale: 0.5,
-      }}
-      animate={{
-        x: 0,
-        opacity: 1,
-        scale: 1,
-      }}
-      transition={{
-        duration: 1.5,
-    }}
-        id="header-right"
-        className="flex flex-row items-center text-gray-300 cursor-pointer"
-      >
-        <SocialIcon
-          className="cursor-pointer"
-          network="email"
-          fgColor="white"
-          bgColor="transparent"
-        />
-        <p className="uppercase hidden md:inline-flex text-sm text-white">
-          Get In Touch
-        </p>
-      </motion.div>
+      <Link href="#contact">
+        <motion.div
+          initial={{
+            x: 500,
+            opacity: 0,
+            scale: 0.5,
+          }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.5,
+          }}
+          id="header-right"
+          className="flex flex-row items-center text-gray-300 cursor-pointer"
+        >
+          <button>
+            <SocialIcon
+              className="cursor-pointer"
+              network="email"
+              fgColor="white"
+              bgColor="transparent"
+            />
+            <p className="uppercase hidden md:inline-flex text-sm text-white">
+              Get In Touch
+            </p>
+          </button>
+        </motion.div>
+      </Link>
     </header>
   );
 }

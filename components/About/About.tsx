@@ -44,6 +44,7 @@ export default function About({}: Props) {
           <Image
             src={profilePic}
             alt="about_pic_1"
+            priority={true}
             className="w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[500px] xl:h-[500px]"
           />
         </motion.div>
